@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Portfolio</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+
+    <!-- Responsive Navbar Component -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Kanishkar R</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase small fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alert Component -->
+    <div class="container mt-4">
+        <div class="alert alert-info alert-dismissible fade show shadow-sm border-0" role="alert">
+            <strong>👋 Hello there!</strong> I'm currently open for freelance projects and new development roles.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <!-- Header / Hero Section -->
+    <header class="bg-primary text-white text-center py-5 mb-5 hero-section align-content-center">
+        <div class="container py-5">
+            <h1 class="display-3 fw-bolder mb-3">Full Stack Developer</h1>
+            <p class="lead fw-normal mb-4">Building responsive, scalable web applications that deliver amazing user experiences.</p>
+            <!-- Button Component -->
+            <a href="#projects" class="btn btn-light btn-lg px-4 me-md-2 fw-bold shadow-sm">View My Work</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- About Section with Grid -->
+        <section id="about" class="mb-5 pt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+                    <h2 class="mb-3 pb-2 border-bottom fw-bold">About Me</h2>
+                    <p class="lead">Hello! I'm Kanishkar R, a passionate web developer focused on creating intuitive, fast, and responsive digital interfaces.</p>
+                    <p class="text-muted">I specialize in building rich, interactive web applications from end-to-end, utilizing modern front-end frameworks like React, paired with solid back-end architecture using Node.js. My goal is to write clean, maintainable code to deliver polished products.</p>
+                    <a href="#contact" class="btn btn-outline-primary mt-2">Let's Connect</a>
+                </div>
+                
+                <!-- Skills Section (Nested Grid inside parent Grid) -->
+                <div class="col-lg-6" id="skills">
+                    <h3 class="mb-3 fw-bold">My Top Skills</h3>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4">
+                            <div class="skill-box p-3 bg-light text-center rounded border fw-semibold">HTML5</div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="skill-box p-3 bg-light text-center rounded border fw-semibold">CSS3</div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="skill-box p-3 bg-light text-center rounded border fw-semibold">JavaScript</div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="skill-box p-3 bg-light text-center rounded border fw-semibold">Bootstrap 5</div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="skill-box p-3 bg-light text-center rounded border fw-semibold">React.js</div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="skill-box p-3 bg-light text-center rounded border fw-semibold">Node.js</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Bootstrap Grid + Card Components) -->
+        <section id="projects" class="mb-5 pt-5 pb-5 bg-light px-4 rounded-4 shadow-sm">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold d-inline-block border-bottom border-primary border-3 pb-2">Featured Projects</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <!-- Project Card 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 project-card">
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary mb-2">JavaScript</div>
+                            <h5 class="card-title fw-bold">Task Tracker App</h5>
+                            <p class="card-text text-muted">A full-featured To-Do application demonstrating DOM manipulation, local storage persistence, and dynamic UI rendering.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                            <!-- Button Components -->
+                            <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary ms-1">Source</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 project-card">
+                        <div class="card-body p-4">
+                            <div class="badge bg-info mb-2">Fetch API</div>
+                            <h5 class="card-title fw-bold">Daily Quotes Feed</h5>
+                            <p class="card-text text-muted">A responsive web application that fetches real-time data from a public REST API and elegantly displays it to the user with loaders.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                            <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary ms-1">Source</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 project-card">
+                        <div class="card-body p-4">
+                            <div class="badge bg-success mb-2">Bootstrap</div>
+                            <h5 class="card-title fw-bold">E-Commerce Storefront</h5>
+                            <p class="card-text text-muted">A modern front-end storefront built with Bootstrap 5 grid, showcasing advanced flexbox techniques and responsive design.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                            <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary ms-1">Source</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-5 pt-4">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold d-inline-block border-bottom border-primary border-3 pb-2">Get In Touch</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label fw-semibold">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="How can I help you?" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark btn-lg py-2 fw-semibold">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; 2026 Kanishkar R. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper Component Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
