@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS Hash Router SPA</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#/home" class="logo">Hash<span class="highlight">SPA</span></a>
+            <ul class="nav-links">
+                <li><a href="#/home" class="nav-link" data-route="/home">Home</a></li>
+                <li><a href="#/services" class="nav-link" data-route="/services">Services</a></li>
+                <li><a href="#/contact" class="nav-link" data-route="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area where views will be injected -->
+    <main id="app" class="main-content">
+        <!-- Content gets rendered here by app.js -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Kanishkar R. Vanilla JS SPA Demo.</p>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
