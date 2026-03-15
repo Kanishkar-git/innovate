@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+header {
+  text-align: center;
+}
+section {
+  margin-top: 30px;
+}
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
