@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #E0EAFC, #CFDEF3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #A0AAB2;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.todo-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#task-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #fff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#task-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#task-input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #64ffda;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+#add-btn {
+  background: #64ffda;
+  border: none;
+  border-radius: 12px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #0F2027;
+}
+
+#add-btn:hover {
+  background: #4cd6b8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+}
+
+#add-btn:active {
+  transform: translateY(0);
+}
+
+#add-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tasks-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.tasks-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tasks-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.task-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #64ffda;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.task-item.completed .checkbox {
+  background: #64ffda;
+}
+
+.checkbox svg {
+  width: 14px;
+  height: 14px;
+  color: #0F2027;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.task-item.completed .checkbox svg {
+  opacity: 1;
+}
+
+.task-text {
+  font-size: 1rem;
+  transition: all 0.3s;
+  word-break: break-word;
+}
+
+.task-item.completed .task-text {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: line-through;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.delete-btn svg {
+  width: 20px;
+  height: 20px;
+}
