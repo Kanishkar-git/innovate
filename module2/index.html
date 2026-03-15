@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container animate-slide-down">
+      <h1>Kanishkar R</h1>
+      <p>Full Stack Developer</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="about section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Hello! I'm Anantha Raman, a passionate Web Developer with a focus on creating beautiful, responsive, and user-friendly web applications. I love building interfaces that provide great user experiences.</p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">React</div>
+            <div class="skill">Git</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section bg-light">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Project One</h3>
+            <p>A responsive landing page built with modern HTML & CSS features including Flexbox and CSS Grid.</p>
+          </article>
+          <article class="project-card">
+            <h3>Project Two</h3>
+            <p>An interactive web application using JavaScript to provide real-time data updates.</p>
+          </article>
+          <article class="project-card">
+            <h3>Project Three</h3>
+            <p>A simple backend server created with Node.js and Express to handle RESTful API requests.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Anantha Raman. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
